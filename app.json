@@ -20,5 +20,14 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-tag": "tdesign-miniprogram/tag/tag"
+  }
 }

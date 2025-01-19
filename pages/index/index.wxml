@@ -1,7 +1,50 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <text>Hello World</text>
+<view class="container">
+  <view class="content">
+    <block wx:if="{{value === 0}}">
+      <!-- Writing Section Content -->
+      <view class="section-content">
+        <view class="section-title">Writing Practice</view>
+        <navigator url="/pages/wordLearner/wordLearner" class="tool-item">
+          <t-button theme="primary" block>Word Learner</t-button>
+        </navigator>
+        <navigator url="/pages/writingTutor/writingTutor" class="tool-item">
+          <t-button theme="primary" block>Writing Tutor</t-button>
+        </navigator>
+        <navigator url="/pages/fancyWords/fancyWords" class="tool-item">
+          <t-button theme="primary" block>Fancy Words</t-button>
+        </navigator>
+      </view>
+    </block>
+
+    <block wx:if="{{value === 1}}">
+      <!-- Speaking Section Content -->
+      <view class="section-content">
+        <view class="section-title">Speaking Practice</view>
+        <view class="coming-soon">
+          <t-tag theme="warning">Coming Soon!</t-tag>
+        </view>
+      </view>
+    </block>
   </view>
-</scroll-view>
+
+  <block wx:if="{{value === 2}}">
+      <!-- Me Section Content -->
+      <view class="section-content">
+        <view class="section-title">Me</view>
+        <view class="coming-soon">
+          <t-tag theme="warning">Coming Soon!</t-tag>
+        </view>
+      </view>
+    </block>
+  <t-tab-bar t-class="t-tab-bar" value="{{value}}" bindchange="onChange" shape="round" theme="tag" split="{{false}}">
+    <t-tab-bar-item
+      wx:for="{{list}}"
+      wx:key="value"
+      value="{{item.value}}"
+      icon="{{item.icon}}"
+      ariaLabel="{{item.ariaLabel}}"
+    >
+    </t-tab-bar-item>
+  </t-tab-bar>
+</view>
