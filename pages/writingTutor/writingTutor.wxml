@@ -1,2 +1,28 @@
-<!--pages/writingTutor/writingTutor.wxml-->
-<text>pages/writingTutor/writingTutor.wxml</text>
+<t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="Writing Tutor">
+    <view slot="capsule" class="custom-capsule">
+      <t-icon
+        size="40rpx"
+        bind:tap="onBack"
+        aria-role="button"
+        aria-label="返回"
+        name="chevron-left"
+        class="custom-capsule__icon back"
+      />
+      <t-icon
+        size="40rpx"
+        bind:tap="onGoHome"
+        aria-role="button"
+        aria-label="首页"
+        name="home"
+        class="custom-capsule__icon home"
+      />
+    </view>
+</t-navbar>
+<view class="container">
+  <view class="content">
+    <t-input placeholder="Input the word for query" />
+    <block wx:if="{{isResult === 1}}">
+      <view>Show results</view>
+    </block>
+  </view>
+</view>

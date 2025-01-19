@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "openai": "^4.79.1",
     "tdesign-miniprogram": "^1.8.5"
   }
 }

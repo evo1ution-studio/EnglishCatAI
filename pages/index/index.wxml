@@ -8,7 +8,7 @@
         <view class="section-description">Practice Writing with AI (Powered by DeepSeek)</view>
         <t-cell-group theme="card">
           <t-cell title="Word Learner" leftIcon="translate-1" url="/pages/wordLearner/wordLearner" description="Learn Words in Context" hover arrow />
-          <t-cell title="Writing Tutor" leftIcon="book-open" url="/pages/wordLearner/writingTutor" description="Grade Your Writing and Get Advice" hover arrow />
+          <t-cell title="Writing Tutor" leftIcon="book-open" url="/pages/writingTutor/writingTutor" description="Grade Your Writing and Get Advice" hover arrow />
         </t-cell-group>
       </view>
     </block>
