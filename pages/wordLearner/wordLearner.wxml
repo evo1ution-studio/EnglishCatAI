@@ -1,21 +1,25 @@
 <!--pages/wordLearner.wxml-->
 <view class="container">
   <t-input class="word-input" placeholder="Input the word for query" />
-  <view class="content">
-    <block wx:if="{{isResult === 0}}">
-    </block>
-    <block wx:if="{{isResult === 1}}">
+  <block wx:if="{{isResult === 1}}">
+      <scroll-view class="scroll-content" scroll-y="true">
         <view class="section-content" wx:for="{{resultList}}" wx:key="id">
           <view class="section-title">{{item.id+1}}. {{item.definition}}</view>
           <view class="section-example-content" wx:for="{{item.examples}}" wx:for-item="example">
             <view class="section-example">{{example}}</view>
           </view>
         </view>
+      </scroll-view>
+    </block>
+    <block wx:if="{{isResult === 0 || isResult === 2}}">
+      <view class="content">
+    <block wx:if="{{isResult === 0}}">
     </block>
     <block wx:if="{{isResult === 2}}">
       <view class="loading">Loading...</view>
     </block>
   </view>
+    </block>
 </view>
 <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="Word Learner">
     <view slot="capsule" class="custom-capsule">

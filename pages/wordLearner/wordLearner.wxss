@@ -1,8 +1,6 @@
 /* pages/wordLearner.wxss */
 page {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .custom-capsule {
@@ -32,7 +30,8 @@ page {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100%; 
+  overflow:hidden;
   margin-top: 0px;
 }
 
@@ -45,7 +44,9 @@ page {
 
 .word-input{
   width: 90%;
+  flex-shrink: 0;
   max-height: 10px;
+  height: 50px;
 }
 
 .loading{
@@ -65,7 +66,9 @@ page {
   margin-top: 5px;
 }
 
-.section-scroll{
-  height: 654rpx;
-  margin-bottom: 10px;
+.scroll-content{
+  flex: 1;
+  margin-top: 20px;
+  height: 1px;
+  width: 90%;
 }
