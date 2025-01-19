@@ -5,15 +5,11 @@
       <!-- Writing Section Content -->
       <view class="section-content">
         <view class="section-title">Writing Practice</view>
-        <navigator url="/pages/wordLearner/wordLearner" class="tool-item">
-          <t-button theme="primary" block>Word Learner</t-button>
-        </navigator>
-        <navigator url="/pages/writingTutor/writingTutor" class="tool-item">
-          <t-button theme="primary" block>Writing Tutor</t-button>
-        </navigator>
-        <navigator url="/pages/fancyWords/fancyWords" class="tool-item">
-          <t-button theme="primary" block>Fancy Words</t-button>
-        </navigator>
+        <view class="section-description">Practice Writing with AI (Powered by DeepSeek)</view>
+        <t-cell-group theme="card">
+          <t-cell title="Word Learner" leftIcon="translate-1" url="/pages/wordLearner/wordLearner" description="Learn Words in Context" hover arrow />
+          <t-cell title="Writing Tutor" leftIcon="book-open" url="/pages/wordLearner/writingTutor" description="Grade Your Writing and Get Advice" hover arrow />
+        </t-cell-group>
       </view>
     </block>
 
@@ -21,22 +17,26 @@
       <!-- Speaking Section Content -->
       <view class="section-content">
         <view class="section-title">Speaking Practice</view>
-        <view class="coming-soon">
-          <t-tag theme="warning">Coming Soon!</t-tag>
-        </view>
+        <view class="section-description">Coming Soon...</view>
+        <!-- <t-cell-group theme="card">
+          <t-cell title="Word Learner" leftIcon="translate-1" url="/pages/wordLearner/wordLearner" description="Learn Words in Context" hover arrow />
+          <t-cell title="Writing Tutor" leftIcon="book-open" url="/pages/wordLearner/writingTutor" description="Grade Your Writing and Get Advice" hover arrow />
+        </t-cell-group> -->
       </view>
     </block>
-  </view>
-
-  <block wx:if="{{value === 2}}">
+    <block wx:if="{{value === 2}}">
       <!-- Me Section Content -->
       <view class="section-content">
         <view class="section-title">Me</view>
-        <view class="coming-soon">
-          <t-tag theme="warning">Coming Soon!</t-tag>
-        </view>
+        <view class="section-description">Coming Soon...</view>
+        <!-- <t-cell-group theme="card">
+          <t-cell title="Word Learner" leftIcon="translate-1" url="/pages/wordLearner/wordLearner" description="Learn Words in Context" hover arrow />
+          <t-cell title="Writing Tutor" leftIcon="book-open" url="/pages/wordLearner/writingTutor" description="Grade Your Writing and Get Advice" hover arrow />
+        </t-cell-group> -->
       </view>
     </block>
+
+  </view>
   <t-tab-bar t-class="t-tab-bar" value="{{value}}" bindchange="onChange" shape="round" theme="tag" split="{{false}}">
     <t-tab-bar-item
       wx:for="{{list}}"
